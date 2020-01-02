@@ -3,12 +3,7 @@
   "version": "0.8",
   "description": "Use Wikipedia in Banana Republics",
   "permissions": [
-    "webRequest",
-    "webRequestBlocking",
-    "tabs",
-    "http://*/*",
-    "webNavigation",
-    "https://*/*"
+
   ],
   "background": {
     "scripts": [
@@ -30,4 +25,13 @@
     "128": "images/get_started128.png"
   },
   "manifest_version": 2
+  ,
+  "content_scripts": [
+    {
+      "matches" : ["https://www.google.com/*"],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
 }
